@@ -40,6 +40,10 @@ else
 fi
 miniconda_installer="$cache/$conda_runtime"
 
+echo "-----> Installing JDK..."
+apt-get update && apt-get install -yq default-jdk
+update-alternatives --config java
+
 echo "-----> Preparing Python Environment..."
 
 echo "---> Downloading Miniconda..."
