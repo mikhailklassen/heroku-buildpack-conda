@@ -41,6 +41,7 @@ fi
 miniconda_installer="$cache/$conda_runtime"
 
 echo "-----> Installing JDK..."
+mkdir /var/lib/apt/lists/partial
 apt-get update && apt-get install -yq default-jdk
 update-alternatives --config java
 
