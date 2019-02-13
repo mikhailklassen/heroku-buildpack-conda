@@ -41,6 +41,7 @@ fi
 miniconda_installer="$cache/$conda_runtime"
 
 echo "-----> Preparing Python Environment..."
+pip install -y boilerpipe
 
 echo "---> Downloading Miniconda..."
 wget -O $miniconda_installer "https://repo.continuum.io/miniconda/$conda_runtime"
