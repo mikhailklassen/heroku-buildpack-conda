@@ -40,6 +40,11 @@ else
 fi
 miniconda_installer="$cache/$conda_runtime"
 
+echo "-----> Installing apt packages..."
+apt-get update
+apt-get install --reinstall build-essential
+apt-get install g++ python3-dev
+
 echo "-----> Preparing Python Environment..."
 
 echo "---> Downloading Miniconda..."
